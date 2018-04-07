@@ -1,8 +1,22 @@
 import React from "react";
 
-const Home = () => 
-    
-   <h1> Hello </h1>;
 
+const Background ={
+    backgroundImage: "url('/images/Background.png')",
+    // Function in Css calculating the correct height of the image
+    height: "calc(100vh - 108px)"
+  };
+
+const Font ={
+    color: "white",
+    textAlign: "center"
+};
+  
+
+const Home = () => 
+<div style={Background}>
+   <h1 style={Font}> Van Goghs Dough - Need to PhotoShop this pic </h1>
+</div>
+   
 
 export default Home;
