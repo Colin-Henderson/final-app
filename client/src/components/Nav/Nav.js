@@ -19,7 +19,7 @@ const Nav = () => (
         <a className="nav-link" href="/review">Reviews</a>
       </li>
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Inspiration
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
