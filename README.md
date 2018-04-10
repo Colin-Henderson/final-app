@@ -1,6 +1,11 @@
 
 A final Full-Stack application project. Utilizing React, MongoDB, Bootstrap, HTML, CSS, API's and more. 
 
+Going to Utilize: Nodemailer for email 
+MongoDB: for reviews
+Harvard or Google API: for Pizza and Art 
+
+
 Test
 
 
