@@ -2,9 +2,10 @@ import React from "react";
 
 
 const Background ={
-    backgroundImage: "url('/images/Background.png')",
+    backgroundImage: "url('/images/bg1.png')",
     // Function in Css calculating the correct height of the image
-    height: "calc(100vh - 108px)"
+    height: "calc(100vh - 108px)",
+    // backgroundRepeat: "noRepeat"
   };
 
 const Font ={
