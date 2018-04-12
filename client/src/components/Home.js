@@ -6,6 +6,8 @@ const Background ={
     // Function in Css calculating the correct height of the image
     height: "calc(100vh - 108px)",
     // backgroundRepeat: "noRepeat"
+    width: "100%",
+    backgroundSize: "cover"
   };
 
 const Font ={
