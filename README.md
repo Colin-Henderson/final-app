@@ -5,6 +5,8 @@ Going to Utilize: Nodemailer for email
 MongoDB: for reviews
 Harvard or Google API: for Pizza and Art 
 
+Also need to utilize some form of OAuth into the application 
+
 
 Test
 
