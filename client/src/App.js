@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-import Review from "./components/Review";
+import Review from "./Reviews/Review";
 import Art from "./components/Art";
 import Gallery from "./components/Gallery";
 import Request from "./components/Request";
