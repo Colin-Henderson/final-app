@@ -1,11 +1,3 @@
-// import React from "react";
-
-// const Review = () =>
-
-// <h1> Review - Should be rendering a lot of reviews - need to utilize MongoDb for this portion </h1>;
-
-// export default Review;
-
 import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
@@ -15,15 +7,24 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-const Background ={
-    height: "100vh",
-    width: "100%",
-    margin: "auto"
-  };
+// const Background ={
+//     height: "calc(100vh - 100px)",
+//     width: "100%",
+//     margin: "auto"
+//   };
 
+//   const Background ={
+//     backgroundImage: "url('/images/bg1.png')",
+//     // Function in Css calculating the correct height of the image
+//     height: "calc(100vh - 108px)",
+//     // backgroundRepeat: "noRepeat"
+//     width: "100%",
+//     backgroundSize: "cover"
+//   };
 
 class Reviews extends Component {
   state = {
+    reviews: [],
     name: "",
     stars: "",
     comments: ""
@@ -37,7 +38,7 @@ class Reviews extends Component {
     API.getReviews()
       .then(res => {
         console.log(res.data);
-        this.setState({ name: "", stars: "", comments: ""})
+        this.setState({ name: "", stars: "", comments: "", reviews: res.data })
       })
       .catch(err => console.log(err));
   };
@@ -73,7 +74,7 @@ class Reviews extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
+            <Jumbotron style={{height: "100px"}}>
               <h1>Leave Us a Review</h1>
             </Jumbotron>
             <form>
@@ -107,22 +108,23 @@ class Reviews extends Component {
             <Jumbotron>
               <h1>Reviews</h1>
             </Jumbotron>
-            {/* {this.state.reviews.length ? (
+            {this.state.reviews.length ? (
               <List>
                 {this.state.reviews.map(review => (
-                  <ListItem key={reviews._id}>
-                    <Link to={"/reviews/" + reviews._id}>
+                  <ListItem key={review._id}>
+                    <Link to={"/reviews/" + review._id}>
                       <strong>
-                        {reviews.title} by {reviews.author}
+                          {/* need to italicize this quote */}
+                       "{review.comments}" -  {review.name} - {review.stars} ⭐'s
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteReview(reviews._id)} />
+                    <DeleteBtn onClick={() => this.deleteReview(review._id)} />
                   </ListItem>
                 ))}
               </List>
             ) : (
               <h3>No Results to Display</h3>
-            )} */}
+            )}
           </Col>
         </Row>
       </Container>
