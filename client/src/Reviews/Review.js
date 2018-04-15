@@ -113,9 +113,11 @@ class Reviews extends Component {
                 {this.state.reviews.map(review => (
                   <ListItem key={review._id}>
                     <Link to={"/reviews/" + review._id}>
-                      <strong>
-                          {/* need to italicize this quote */}
-                       "{review.comments}" -  {review.name} - {review.stars} ⭐'s
+                      <strong style={{fontStyle: "italic"}}>
+                       "{review.comments}" -  
+                       </strong>
+                       <strong>
+                       {review.name} - {review.stars} ⭐'s
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteReview(review._id)} />

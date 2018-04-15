@@ -1,4 +1,5 @@
 import React from "react";
+import { Jumbotron, Button } from 'reactstrap';
 
 
 const Background ={
@@ -18,6 +19,7 @@ const Font ={
 
 const Home = () => 
 <div style={Background}>
+    <br></br>
    <h1 style={Font}> Van Goghs Dough - Need to PhotoShop this pic </h1>
 </div>
    
